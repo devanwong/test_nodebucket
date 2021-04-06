@@ -1,0 +1,107 @@
+/*============================================;
+Title: nodebucket;
+Author: Professor Krasso ;
+Date: 18 March 2021;
+Modified By: Douglas Jenkins;
+Description: creating a sign in page
+;===========================================*/
+body{
+  height: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: lighter;
+    float: left;
+    margin-left: 74px;
+  }
+
+  .navbar-container {
+    padding: 5px;
+  }
+
+  .navbar-link {
+    font-size: 24px;
+    font-weight: lighter;
+    float: left;
+  }
+
+  .main-content {
+    padding-left: 30px;
+    padding-bottom: 5rem;
+  }
+
+  .page-container{
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    margin-top: 20px;
+    clear: both;
+    left: 0;
+    bottom: 0;
+  }
+
+  .footer-content {
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 3px;
+  }
+
+  .footer-content p {
+    margin-left: 74px;
+  }
+
+
+  .bu-link {
+    text-decoration: none;
+  }
+
+  .bu-link:hover {
+    text-decoration: underline;
+  }
+
+
+/* Responsive Design */
+
+  @media screen and (max-width: 800px) {
+    footer {
+      width: 100%;
+      text-align: center;
+    }
+
+
+    .footer-content {
+      font-size: 12px;
+      font-weight: lighter;
+      letter-spacing: 3px;
+    }
+
+    .logo, .navbar-link {
+      font-size: 18px;
+      font-weight: lighter;
+      float: left;
+    }
+
+    .logo{
+      margin-left: 0px;
+    }
+
+    .main-content {
+      padding-right: 30px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .logo, .navbar-link {
+      font-size: 13.5px;
+      font-weight: lighter;
+      float: left;
+    }
+  }
+
+

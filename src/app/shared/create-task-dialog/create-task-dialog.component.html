@@ -1,0 +1,22 @@
+<!--
+/*============================================;
+Title: nodebucket;
+Author: Professor Krasso ;
+Date: 31 March 2021;
+Modified By: Douglas Jenkins;
+Description: Creating the UI page
+;===========================================*/
+-->
+<h2 mat-dialog-title>Add New Task</h2>
+
+<!-- Creates the dialog for the tasks-->
+<mat-dialog-content [formGroup]="taskForm">
+  <mat-form-field>
+    <input type="text" matInput placeholder="Enter a task name" formControlName="text" (keydown.enter)="createTask()">
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button (click)="createTask()" [disabled]="!taskForm.valid">Create Task</button>
+</mat-dialog-actions>

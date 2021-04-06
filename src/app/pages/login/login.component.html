@@ -1,0 +1,58 @@
+<!--
+/*============================================;
+Title: nodebucket;
+Author: Professor Krasso ;
+Date: 18 March 2021;
+Modified By: Douglas Jenkins;
+Description: creating a sign in page
+;===========================================*/
+-->
+<div fxLayout='column'>
+
+  <mat-card fxFlex class="mat-elevation-z8 login-container">
+
+    <!-- Card Title and subtitle on top of sign-in form -->
+    <mat-card-title class="login-title mat-headline">Employee Login</mat-card-title>
+    <br>
+    <mat-card-subtitle class="login-subtitle mat-headline">You must enter a valid numerical employeeId to proceed</mat-card-subtitle>
+
+    <mat-card-content>
+
+      <!--Beginning of the login-->
+      <mat-card class="mat-elevation-z0" fxLayout='column' fxLayoutGap='10px'>
+        <form [formGroup]='loginForm' (ngSubmit)='login(); loginForm.reset()'>
+        <mat-card-content>
+
+          <mat-form-field fxFlex>
+            <input matInput
+                  [formControl]="loginForm.controls['empId']"
+                  placeholder='Employee ID' />
+
+            <!-- A warning message if try to enter without a employee id -->
+            <mat-error *ngIf="loginForm.controls['empId'].hasError('required') && loginForm.controls['empId'].touched">
+              Employee ID is a required field
+            </mat-error>
+
+               <!-- A warning message if try to enter anything but a numerical value -->
+            <mat-error *ngIf="loginForm.controls['empId'].hasError('pattern') && loginForm.controls['empId'].touched">
+              Employee ID must be a numerical value
+            </mat-error>
+          </mat-form-field>
+
+        </mat-card-content>
+
+         <!-- The submit button which only lights up when numerical values are being added -->
+          <mat-card-actions align='end'>
+            <button type="submit"
+                    fxFlex mat-raised-button
+                    [disabled]='!loginForm.valid'
+                    color='primary'>Submit</button>
+          </mat-card-actions>
+
+        </form>
+      </mat-card>
+
+    </mat-card-content>
+
+  </mat-card>
+</div>

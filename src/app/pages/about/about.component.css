@@ -1,0 +1,19 @@
+/*============================================;
+Title: nodebucket;
+Author: Professor Krasso ;
+Date: 2 April 2021;
+Modified By: Douglas Jenkins;
+Description: built remaining pages
+;===========================================*/
+
+.about{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.about img{
+display: block;
+padding: 5px;
+max-width: 100%;
+}
