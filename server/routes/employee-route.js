@@ -9,7 +9,7 @@ Description: creating the tasks for soap ui
 const express = require('express');
 const Employee = require('../db-models/employee');
 const BaseResponse = require('../service/base-response');
-const { $ } = require('protractor');
+// const { $ } = require('protractor');
 
 // defines router variable
 const router = express.Router();
